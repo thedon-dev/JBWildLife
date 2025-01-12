@@ -1,4 +1,8 @@
 import React from "react";
+import { BiHome, BiMoney, BiWorld } from "react-icons/bi";
+import { FcContacts, FcWorkflow } from "react-icons/fc";
+import { GoWorkflow } from "react-icons/go";
+import { GrContact } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,19 +17,20 @@ const Navbar = () => {
         <div className="w-full left-0 flex justify-center fixed lg:relative bottom-0 bg-green-700 lg:bg-transparent border-t-4 lg:border-0 border-white z-20">
           <div className="text-white lg:text-black font-sm font-bold flex justify-around lg:justify-center gap-5 text-sm lg:text-base w-full py-3 lg:py-0">
             <Link to="/" className="px-3 py-1">
-              Home
+            <p className="hidden lg:block">Home</p> <BiHome className="block lg:hidden" color="white" size={25}/>
+              
             </Link>
             <Link to="/" className="px-3 py-1">
-              Purpose
+             <p className="hidden lg:block">Purpose</p> <GoWorkflow className="block lg:hidden" color="white" size={25}/>
             </Link>
             <Link to="/" className="px-3 py-1">
-              About
+             <p className="hidden lg:block">About</p> <BiWorld className="block lg:hidden" color="white" size={25}/>
             </Link>
             <Link to="/" className="px-3 py-1">
-              Contact
+             <p className="hidden lg:block">Contact</p> <GrContact className="block lg:hidden" color="white" size={25}/>
             </Link>
             <Link to="/" className="px-3 py-1">
-              Donate
+             <p className="hidden lg:block">Donate</p>  <BiMoney className="block lg:hidden" color="white" size={25}/>
             </Link>
           </div>
         </div>
