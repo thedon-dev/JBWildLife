@@ -20,16 +20,16 @@ const Navbar = () => {
             <p className="hidden lg:block">Home</p> <BiHome className="block lg:hidden" color="white" size={25}/>
               
             </Link>
-            <Link to="/" className="px-3 py-1">
-             <p className="hidden lg:block">Purpose</p> <GoWorkflow className="block lg:hidden" color="white" size={25}/>
+            <Link to="/whatwedo" className="px-3 py-1">
+             <p className="hidden lg:block">What We Do</p> <GoWorkflow className="block lg:hidden" color="white" size={25}/>
             </Link>
-            <Link to="/" className="px-3 py-1">
+            <Link to="/about" className="px-3 py-1">
              <p className="hidden lg:block">About</p> <BiWorld className="block lg:hidden" color="white" size={25}/>
             </Link>
             <Link to="/" className="px-3 py-1">
              <p className="hidden lg:block">Contact</p> <GrContact className="block lg:hidden" color="white" size={25}/>
             </Link>
-            <Link to="/" className="px-3 py-1">
+            <Link to="/donate" className="px-3 py-1">
              <p className="hidden lg:block">Donate</p>  <BiMoney className="block lg:hidden" color="white" size={25}/>
             </Link>
           </div>

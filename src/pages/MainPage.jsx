@@ -138,11 +138,6 @@ const LandingPage = () => {
           </form>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <footer className="bg-green-700 text-white py-8 text-center">
-        <p>&copy; 2025 Wildlife Reservation. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
