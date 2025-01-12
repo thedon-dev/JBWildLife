@@ -26,7 +26,7 @@ const Navbar = () => {
             <Link to="/about" className="px-3 py-1">
              <p className="hidden lg:block">About</p> <BiWorld className="block lg:hidden" color="white" size={25}/>
             </Link>
-            <Link to="/" className="px-3 py-1">
+            <Link to="/contact" className="px-3 py-1">
              <p className="hidden lg:block">Contact</p> <GrContact className="block lg:hidden" color="white" size={25}/>
             </Link>
             <Link to="/donate" className="px-3 py-1">

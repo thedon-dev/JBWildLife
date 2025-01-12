@@ -18,8 +18,7 @@ function App() {
           <Route path="/whatwedo" element={<WhatWeDoPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/donate" element={<DonationPage />} />
-
-          <Route path="/donate" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

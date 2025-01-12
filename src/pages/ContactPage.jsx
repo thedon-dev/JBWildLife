@@ -26,7 +26,7 @@ const ContactPage = () => {
 
   return (
     <div>
-      <header className="bg-green-700 text-white py-16 text-center px-6">
+      <header className="bg-green-700 text-white py-40 text-center px-6">
         <h1 className="text-4xl md:text-6xl font-bold">Contact Us</h1>
         <p className="mt-4 text-lg md:text-xl">
           Have questions or want to connect? Reach out to us today.
