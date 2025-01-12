@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LuLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
+  const [pastWorks, setPastWorks] = useState([]);
+
+  useEffect(() => {
+    const fetchPastWorks = async () => {
+      try {
+        const response = await fetch("/pastworks.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch past works.");
+        }
+        const data = await response.json();
+        setPastWorks(data);
+      } catch (error) {
+        console.error("Error fetching past works:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPastWorks()
+  }, []);
   return (
     <div className="mb-10 lg:mb-0">
       <section
@@ -73,38 +93,23 @@ const LandingPage = () => {
       <section className="bg-white py-16 px-6" id="works">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative">
-              <img
-                src="https://via.placeholder.com/400x300"
-                alt="Wildlife Project"
-                className="rounded-lg shadow-lg"
-              />
-              <p className="mt-4 text-gray-600">
-                Protecting forests to create safe havens for animals.
-              </p>
-            </div>
-            <div className="relative">
-              <img
-                src="https://via.placeholder.com/400x300"
-                alt="Conservation Effort"
-                className="rounded-lg shadow-lg"
-              />
-              <p className="mt-4 text-gray-600">
-                Partnering with local communities to promote sustainable living.
-              </p>
-            </div>
-            <div className="relative">
-              <img
-                src="https://via.placeholder.com/400x300"
-                alt="Research Initiatives"
-                className="rounded-lg shadow-lg"
-              />
-              <p className="mt-4 text-gray-600">
-                Conducting research to protect endangered species and their
-                habitats.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pastWorks.map((work) => (
+              <div
+                key={work.id}
+                className="bg-gray-100 shadow-lg rounded-lg p-6"
+              >
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-bold text-green-700 mb-2">
+                  {work.title}
+                </h3>
+                <p className="text-gray-600">{work.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
