@@ -5,8 +5,16 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="mb-10 lg:mb-0">
-      {/* Hero Section */}
-      <section className="bg-green-700 text-white py-20 px-6 text-center">
+      <section
+        className=" text-white py-40 px-6 text-center "
+        style={{
+          backgroundImage:
+            "url(https://th.bing.com/th/id/OIP.3ZoMqxuXCX0WfPqXD9aI-AHaEK?rs=1&pid=ImgDetMain)",
+          backgroundRepeat: "no-repat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Preserving Wildlife for Future Generations
@@ -24,7 +32,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* What We Do Section */}
       <section className="bg-gray-100 py-16 px-6" id="what-we-do">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">What We Do</h2>
@@ -52,7 +59,10 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="mt-20">
-            <Link to="/whatwedo" className="bg-green-700 text-white py-3 px-6 rounded-lg">
+            <Link
+              to="/whatwedo"
+              className="bg-green-700 text-white py-3 px-6 rounded-lg"
+            >
               Read More
             </Link>
           </div>

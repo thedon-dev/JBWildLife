@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="px-[5%] lg:px-[10%] py-5 w-full bg-green-700">
+    <nav className="px-[5%] lg:px-[10%] py-5 w-full absolute">
       <div className="2xl:container mx-auto flex lg:justify-center rounded-full py-3 lg:bg-white text-black lg:shadow-lg">
         <div className="lg:hidden">
           <Link className="font-bold text-3xl">
