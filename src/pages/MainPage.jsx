@@ -8,7 +8,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchPastWorks = async () => {
       try {
-        const response = await fetch("/pastworks.json");
+        const response = await fetch("/wildlife.json");
         if (!response.ok) {
           throw new Error("Failed to fetch past works.");
         }
@@ -92,7 +92,7 @@ const LandingPage = () => {
       {/* Works Section */}
       <section className="bg-white py-16 px-6" id="works">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Some Endangered Wildlife</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pastWorks.map((work) => (
               <div
@@ -101,13 +101,13 @@ const LandingPage = () => {
               >
                 <img
                   src={work.image}
-                  alt={work.title}
+                  alt={work.name}
                   className="w-full h-40 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-bold text-green-700 mb-2">
-                  {work.title}
+                  {work.name}
                 </h3>
-                <p className="text-gray-600">{work.description}</p>
+                <p className="text-gray-600">{work.habitat}</p>
               </div>
             ))}
           </div>

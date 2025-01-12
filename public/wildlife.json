@@ -1,0 +1,73 @@
+[
+    {
+      "name": "African Elephant",
+      "scientific_name": "Loxodonta africana",
+      "habitat": "Savannahs, forests, deserts, and marshes",
+      "diet": "Herbivore",
+      "average_lifespan": "60-70 years",
+      "conservation_status": "Vulnerable",
+      "characteristics": {
+        "weight": "4,000-7,000 kg",
+        "height": "3-4 meters",
+        "features": ["Large ears", "Trunk", "Tusks"]
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUw4xTTyBAqdH-gEgl-SMMM_mrooOlRJtpw&s"
+    },
+    {
+      "name": "Bald Eagle",
+      "scientific_name": "Haliaeetus leucocephalus",
+      "habitat": "Near rivers, large lakes, and coastal regions",
+      "diet": "Carnivore",
+      "average_lifespan": "20-30 years",
+      "conservation_status": "Least Concern",
+      "characteristics": {
+        "weight": "3-6.5 kg",
+        "wingspan": "2-2.3 meters",
+        "features": ["White head", "Hooked beak", "Sharp talons"]
+      },
+      "image": "https://media.istockphoto.com/id/1369151591/photo/bald-eagle-with-blurred-green-background.jpg?s=612x612&w=0&k=20&c=awKaNCYd03Z9mGsEXL-fVRsP39161taL5naeAtPUtmY="
+    },
+    {
+      "name": "Snow Leopard",
+      "scientific_name": "Panthera uncia",
+      "habitat": "Mountain ranges of Central and South Asia",
+      "diet": "Carnivore",
+      "average_lifespan": "10-12 years",
+      "conservation_status": "Vulnerable",
+      "characteristics": {
+        "weight": "25-55 kg",
+        "length": "90-115 cm (without tail)",
+        "features": ["Thick fur", "Long tail", "Powerful limbs"]
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw3YY0xdYEHr-LQe0HlnjSO2cCc8vmw7Fftg&s"
+    },
+    {
+      "name": "Amazon River Dolphin",
+      "scientific_name": "Inia geoffrensis",
+      "habitat": "Freshwater rivers and lakes in the Amazon Basin",
+      "diet": "Carnivore (fish, crustaceans)",
+      "average_lifespan": "30 years",
+      "conservation_status": "Endangered",
+      "characteristics": {
+        "weight": "85-160 kg",
+        "length": "1.5-2.5 meters",
+        "features": ["Pinkish color", "Long snout", "Flexible neck"]
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1_TR2y2lYWIEUUjFZQSH7AuUEtTSJgkEa6g&s"
+    },
+    {
+      "name": "Red Panda",
+      "scientific_name": "Ailurus fulgens",
+      "habitat": "Temperate forests in the Himalayas and China",
+      "diet": "Omnivore (bamboo, fruits, insects)",
+      "average_lifespan": "8-10 years",
+      "conservation_status": "Endangered",
+      "characteristics": {
+        "weight": "3-6.2 kg",
+        "length": "50-64 cm (without tail)",
+        "features": ["Red fur", "Bushy tail", "White facial markings"]
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY73ee6iCnd17sVP-GfjLhqGh1MxLeC2jr1Q&s"
+    }
+  ]
+
