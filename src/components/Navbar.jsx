@@ -1,9 +1,10 @@
 import React from "react";
-import { BiHome, BiMoney, BiWorld } from "react-icons/bi";
-import { FcContacts, FcWorkflow } from "react-icons/fc";
+import { BiHome, BiMoney, BiWorld, } from "react-icons/bi";
+import { FcContacts } from "react-icons/fc";
 import { GoWorkflow } from "react-icons/go";
 import { GrContact } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { GiPlantsAndAnimals, GiKidSlide } from "react-icons/gi";
 
 const Navbar = () => {
   return (
@@ -17,20 +18,20 @@ const Navbar = () => {
         <div className="w-full left-0 flex justify-center fixed lg:relative bottom-0 bg-green-700 lg:bg-transparent border-t-4 lg:border-0 border-white z-20">
           <div className="text-white lg:text-black font-sm font-bold flex justify-around lg:justify-center gap-5 text-sm lg:text-base w-full py-3 lg:py-0">
             <Link to="/" className="px-3 py-1">
-            <p className="hidden lg:block">Home</p> <BiHome className="block lg:hidden" color="white" size={25}/>
-              
+              <p className="hidden lg:block">Home</p> <BiHome className="block lg:hidden" color="white" size={25} />
+
             </Link>
-            <Link to="/whatwedo" className="px-3 py-1">
-             <p className="hidden lg:block">What We Do</p> <GoWorkflow className="block lg:hidden" color="white" size={25}/>
+            <Link to="/animals" className="px-3 py-1">
+              <p className="hidden lg:block">Animals</p> <GiPlantsAndAnimals className="block lg:hidden" color="white" size={25} />
             </Link>
             <Link to="/about" className="px-3 py-1">
-             <p className="hidden lg:block">About</p> <BiWorld className="block lg:hidden" color="white" size={25}/>
+              <p className="hidden lg:block">About</p> <BiWorld className="block lg:hidden" color="white" size={25} />
             </Link>
-            <Link to="/contact" className="px-3 py-1">
-             <p className="hidden lg:block">Contact</p> <GrContact className="block lg:hidden" color="white" size={25}/>
+            <Link to="/kids" className="px-3 py-1">
+              <p className="hidden lg:block">Kids</p> <GiKidSlide className="block lg:hidden" color="white" size={25} />
             </Link>
-            <Link to="/donate" className="px-3 py-1">
-             <p className="hidden lg:block">Donate</p>  <BiMoney className="block lg:hidden" color="white" size={25}/>
+            <Link to="/login" className="px-3 py-1">
+              <p className="hidden lg:block">Login</p>  <BiMoney className="block lg:hidden" color="white" size={25} />
             </Link>
           </div>
         </div>

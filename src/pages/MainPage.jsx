@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [pastWorks, setPastWorks] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    // Load favorites from local storage
+    const savedFavorites = localStorage.getItem("favorites");
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
 
   useEffect(() => {
     const fetchPastWorks = async () => {
@@ -16,13 +21,25 @@ const LandingPage = () => {
         setPastWorks(data);
       } catch (error) {
         console.error("Error fetching past works:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
-    fetchPastWorks()
+    fetchPastWorks();
   }, []);
+
+  // Save favorites to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
+  const toggleFavorite = (workId) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.includes(workId)
+        ? prevFavorites.filter((id) => id !== workId) // Remove from favorites
+        : [...prevFavorites, workId] // Add to favorites
+    );
+  };
+
   return (
     <div className="mb-10 lg:mb-0">
       <section
@@ -78,14 +95,6 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className="mt-20">
-            <Link
-              to="/whatwedo"
-              className="bg-green-700 text-white py-3 px-6 rounded-lg"
-            >
-              Read More
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -108,6 +117,16 @@ const LandingPage = () => {
                   {work.name}
                 </h3>
                 <p className="text-gray-600">{work.habitat}</p>
+
+                <button
+                  onClick={() => toggleFavorite(work.id)}
+                  className={`${favorites.includes(work.id)
+                    ? "bg-red-500"
+                    : "bg-green-700"
+                    } p-3 text-white rounded-md mt-4`}
+                >
+                  {favorites.includes(work.id) ? "Remove from Favorites" : "Set as Favorite"}
+                </button>
               </div>
             ))}
           </div>

@@ -11,10 +11,12 @@
         "height": "3-4 meters",
         "features": ["Large ears", "Trunk", "Tusks"]
       },
+      "id": 1,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUw4xTTyBAqdH-gEgl-SMMM_mrooOlRJtpw&s"
     },
     {
       "name": "Bald Eagle",
+      "id": 2,
       "scientific_name": "Haliaeetus leucocephalus",
       "habitat": "Near rivers, large lakes, and coastal regions",
       "diet": "Carnivore",
@@ -29,6 +31,7 @@
     },
     {
       "name": "Snow Leopard",
+      "id": 3,
       "scientific_name": "Panthera uncia",
       "habitat": "Mountain ranges of Central and South Asia",
       "diet": "Carnivore",
@@ -43,6 +46,7 @@
     },
     {
       "name": "Amazon River Dolphin",
+      "id": 4,
       "scientific_name": "Inia geoffrensis",
       "habitat": "Freshwater rivers and lakes in the Amazon Basin",
       "diet": "Carnivore (fish, crustaceans)",
@@ -57,6 +61,7 @@
     },
     {
       "name": "Red Panda",
+      "id": 5,
       "scientific_name": "Ailurus fulgens",
       "habitat": "Temperate forests in the Himalayas and China",
       "diet": "Omnivore (bamboo, fruits, insects)",

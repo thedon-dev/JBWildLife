@@ -7,7 +7,7 @@ const AboutPage = () => {
   useEffect(() => {
     const fetchPastWorks = async () => {
       try {
-        const response = await fetch("/pastworks.json"); 
+        const response = await fetch("/pastworks.json");
         if (!response.ok) {
           throw new Error("Failed to fetch past works.");
         }
@@ -50,7 +50,7 @@ const AboutPage = () => {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-            Our Past Works
+            Events
           </h2>
           {loading ? (
             <p className="text-gray-600 text-center">Loading past works...</p>
@@ -66,6 +66,7 @@ const AboutPage = () => {
                     alt={work.title}
                     className="w-full h-40 object-cover rounded-lg mb-4"
                   />
+                  <div className="text-gray-600 bg-gray-300 w-16 text-center p-1 rounded-3xl mb-3">{work.type}</div>
                   <h3 className="text-xl font-bold text-green-700 mb-2">
                     {work.title}
                   </h3>

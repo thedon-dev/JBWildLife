@@ -15,12 +15,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/whatwedo" element={<WhatWeDoPage />} />
+          <Route path="/animals" element={<WhatWeDoPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/donate" element={<DonationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<DonationPage />} />
+          <Route path="/kids" element={<ContactPage />} />
         </Routes>
-        <Footer />
+        <Footer title={'2025 Wildlife Reservation'} />
       </BrowserRouter>
     </>
   );
