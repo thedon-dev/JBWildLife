@@ -47,7 +47,9 @@ const DonationPage = () => {
     }
   };
 
-
+  const generateRandomId = () => {
+    return Math.floor(1000000000 + Math.random() * 9000000000).toString();
+  };
 
   const handlePrintReceipt = () => {
     window.print();
@@ -124,7 +126,7 @@ const DonationPage = () => {
                 Thank you for logging in! Access your receipt or continue
                 exploring our initiatives.
               </p>
-              <p className="mb-4">Your Id is 12344589878</p>
+              <p className="mb-4">Your Id is {generateRandomId()}</p>
               <button
                 onClick={handlePrintReceipt}
                 className="bg-green-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-800 transition"
